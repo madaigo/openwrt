@@ -43,6 +43,7 @@ jobs:
           ls -l
       - name: compile
         run: |
+          export TERM=xterm
           pwd
           cd openwrt
           ls -l
