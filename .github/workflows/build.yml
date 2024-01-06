@@ -45,9 +45,10 @@ jobs:
         run: |
           pwd
           cd openwrt
+          ls -l
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          make menuconfig
+          cp -f defconfig/mt7986-ax6000.config .config
           make -j$(nproc)
       - name: pack
         run: |
