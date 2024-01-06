@@ -42,7 +42,7 @@ jobs:
           git clone --depth=1 https://github.com/hanwckf/immortalwrt-mt798x.git openwrt
           ls -l
       - name: compile
-        run:
+        run: |
           pwd
           cd openwrt
           ./scripts/feeds update -a
