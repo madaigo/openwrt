@@ -49,7 +49,7 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           cp -f defconfig/mt7986-ax6000.config .config
-          make -j$(nproc)
+          make V=s -j$(nproc)
       - name: pack
         run: |
           cd openwrt
